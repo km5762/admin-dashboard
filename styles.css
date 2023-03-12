@@ -1,0 +1,69 @@
+html, body {
+    height: 100%;
+}
+
+:root {
+    --background-color: #0f172a;
+    --box-color: #1e293b;
+    --box-accent: #334155;
+    --accent: #e2e8f0;
+    color: #e2e8f0;
+    font-family: 'Roboto', sans-serif;
+    --header-font-size: clamp(1.2rem, 1.5vw, 2.5rem);
+    font-size: clamp(0.7rem, 1vw, 2rem);
+}
+
+h1 {
+    font-size: var(--header-font-size);
+    font-weight: 900;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: var(--box-color);
+    grid-column: 1 / 2;
+    padding: 1.5rem;
+}
+
+.sidebar .logo {
+    height: clamp(3rem, 4vw, 4rem);
+}
+
+.sidebar .home {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}   
+
+.sidebar li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: max(5vh, 1rem);
+}
+
+.icon {
+    max-height: 2rem;
+}
+
+.container {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    grid-row: 1 / 2;   
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr; 
+}
+
+.content {
+    background-color: var(--background-color);
+    grid-row: 2 / end;
+}
